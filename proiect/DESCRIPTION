@@ -1,0 +1,11 @@
+Package: proiect
+Title: Proiect TPS
+Version: 0.0.0.9000
+Authors@R: 
+    person("Robert", "Schmidt", , "robert-eduard.schmidt@s.unibuc.ro", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Proiectul 1 la TPS.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
