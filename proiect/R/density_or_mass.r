@@ -1,4 +1,4 @@
-setwd("C:\\Users\\robst\\Desktop\\Robert\\Programming\\VSCode\\Fac\\An 2\\Sem2\\PS\\proiect\\R")
+setwd("./proiect/R")
 source("functie_exemplu.r")
 
 density_or_mass <- function(user_function) {
