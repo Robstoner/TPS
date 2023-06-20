@@ -1,0 +1,1 @@
+setwd("./proiect/R")
