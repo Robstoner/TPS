@@ -67,7 +67,8 @@ ex_3 <- function(set) {
     MLE = mle,
     Moment = moment
   )
-  comparatie
+  
+  print(comparatie)
 }
 
 ex_4 <- function(set) {
@@ -81,7 +82,7 @@ ex_4 <- function(set) {
   rezultate$Normala[rezultate$P_Value > 0.05] <- "Da"
   rezultate$Normala[rezultate$P_Value <= 0.05] <- "Nu"
 
-  rezultate
+  print(rezultate)
 }
 
 main <- function() {
