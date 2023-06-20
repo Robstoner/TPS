@@ -7,6 +7,8 @@ ex_4_mass <- function(user_function) {
   # Calculați media
   mean_value <- sum(x^1 * user_function(x))
 
+  variance <- sum((x - mean_value)^2 * user_function(x))
+
   # Calculați momentele inițiale până la ordinul 4
   moment_1 <- sum(x^1 * user_function(x))
   moment_2 <- sum(x^2 * user_function(x))
@@ -18,6 +20,9 @@ ex_4_mass <- function(user_function) {
   central_moment_2 <- sum((x - mean_value)^2 * user_function(x))
   central_moment_3 <- sum((x - mean_value)^3 * user_function(x))
   central_moment_4 <- sum((x - mean_value)^4 * user_function(x))
+
+  print(paste("Media:", mean_value))
+  print(paste("Dispersia:", variance))
 
   # Afișați rezultatele
   if (!is.finite(moment_1)) {
@@ -73,6 +78,9 @@ ex_4_density <- function(user_function) {
   # Calculați media
   mean_value <- integrate(function(x) x * user_function(x), lower = -Inf, upper = Inf)$value
 
+  # Calculați dispersia
+  variance <- integrate(function(x) (x - mean_value)^2 * user_function(x), lower = -Inf, upper = Inf)$value
+
   # Calculați momentele inițiale până la ordinul 4
   moment_1 <- integrate(function(x) x^1 * user_function(x), lower = -Inf, upper = Inf)$value
   moment_2 <- integrate(function(x) x^2 * user_function(x), lower = -Inf, upper = Inf)$value
@@ -84,6 +92,9 @@ ex_4_density <- function(user_function) {
   central_moment_2 <- integrate(function(x) (x - mean_value)^2 * user_function(x), lower = -Inf, upper = Inf)$value
   central_moment_3 <- integrate(function(x) (x - mean_value)^3 * user_function(x), lower = -Inf, upper = Inf)$value
   central_moment_4 <- integrate(function(x) (x - mean_value)^4 * user_function(x), lower = -Inf, upper = Inf)$value
+
+  print(paste("Media:", mean_value))
+  print(paste("Dispersia:", variance))
 
   # Afișați rezultatele
   if (!is.finite(moment_1)) {
