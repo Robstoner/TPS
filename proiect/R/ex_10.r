@@ -67,7 +67,7 @@ ex_3 <- function(set) {
     MLE = mle,
     Moment = moment
   )
-  
+
   print(comparatie)
 }
 
@@ -92,14 +92,14 @@ main <- function() {
 
   # Meniu interactiv
   while (TRUE) {
-    cat("\nAlegeți opțiunea dorită:")
-    cat("\n1. Histograma, mediana, media și deviația standard")
-    cat("\n2. Identificarea repartiției")
-    cat("\n3. Estimarea parametrilor în baza celor 5 eșantioane")
-    cat("\n4. Verificarea verosimilității extragerii dintr-o repartiție normală")
-    cat("\n0. Ieșire\n")
+    cat("\nAlegeti optiunea dorita:")
+    cat("\n1. 9.1")
+    cat("\n2. 9.2")
+    cat("\n3. 9.3")
+    cat("\n4. 9.4")
+    cat("\n0. Iesire\n")
 
-    optiune <- readline(prompt = "Opțiune: ")
+    optiune <- readline(prompt = "Optiune: ")
 
     if (optiune == "0") {
       break
@@ -114,7 +114,7 @@ main <- function() {
     } else if (optiune == "4") {
       ex_4(set_valori)
     } else {
-      cat("Opțiune invalidă! Vă rugăm să alegeți o opțiune validă.\n")
+      cat("Optiune invalida! Va rugam sa alegeti o optiune valida.\n")
     }
   }
 }
