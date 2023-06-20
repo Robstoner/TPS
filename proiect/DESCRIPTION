@@ -8,8 +8,7 @@ Description: Proiectul 1 la TPS.
 Depends:
     R (>= 3.6.0)
 Imports:
-    fitdistrplus
-    moments
+    MASS
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

@@ -39,7 +39,6 @@ afisare_histograma_si_statistici(set_e)
 # library(MASS)
 
 ex_9_2 <- function(set) {
-
   # Ajustarea distribuției normale
   fit_norm <- MASS::fitdistr(set[set > 0], "normal")
   AIC_norm <- AIC(fit_norm)
@@ -59,7 +58,7 @@ ex_9_2 <- function(set) {
   fit_gamma <- MASS::fitdistr(set[set > 0], "gamma")
   AIC_gamma <- AIC(fit_gamma)
   BIC_gamma <- BIC(fit_gamma)
-  
+
   # Compararea criteriilor AIC și BIC
   criteria <- data.frame(
     Distributie = c("Normala", "Poisson", "Exponentiala", "Gamma"),
@@ -83,8 +82,6 @@ ex_9_2(set_d)
 ex_9_2(set_e)
 
 # 9.3
-# install.packages("moments")
-# library(moments)
 
 # Estimarea prin metoda verosimilității maxime
 mle_a <- MASS::fitdistr(set_a, "normal")$estimate
