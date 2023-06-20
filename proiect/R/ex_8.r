@@ -37,7 +37,7 @@ conditional_Y_given_X_pdf <- function(pdf, x, y) {
   pdf_xy <- function(y) {
     pdf(x, y)
   }
-  pdf(y = y) / marginal_X_pdf(pdf_xy, x)
+  pdf(y) / marginal_X_pdf(pdf_xy, x)
 }
 
 # Funcție pentru construirea funcțiilor de densitate comună, densități marginale și densități condiționate
@@ -55,4 +55,5 @@ build_joint_marginal_conditional <- function(pdf) {
   )
 }
 
+build_marginal_and_conditional(pmf)
 build_joint_marginal_conditional(pdf)
