@@ -1,6 +1,6 @@
 source("functie_exemplu.r")
 
-
+#' @export
 normalization_function <- function(user_function) {
   # Calculați constanta de normalizare k
   normalization_constant <- integrate(user_function, lower = -Inf, upper = Inf)$value

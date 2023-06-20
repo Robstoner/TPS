@@ -9,6 +9,7 @@ densitate_x <- function(x) {
 }
 
 # Funtie pentru calcularea mediei si dispersiei variabilei aleatoare g(X)qq
+#' @export
 ex_5 <- function(g, densitate_x) {
   # Calcularea mediei variabilei aleatoare g(X)
   mean_gx <- integrate(function(x) g(x) * densitate_x(x), lower = -Inf, upper = Inf)$value

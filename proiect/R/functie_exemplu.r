@@ -11,7 +11,7 @@ mass_function <- function(x) {
 }
 
 # Functie de masa comuna pentru doua variabile aleatoare discrete
-pmf <- function(x, y = NULL) {
+f_pmf <- function(x, y = NULL) {
   if (identical(x, 1) && identical(y, 1)) {
     return(0.2)
   } else if (identical(x, 1) && identical(y, 2)) {
@@ -26,7 +26,7 @@ pmf <- function(x, y = NULL) {
 }
 
 # Functie de densitate comuna pentru doua variabile aleatoare discrete
-pdf <- function(x = NULL, y = NULL) {
+f_pdf <- function(x = NULL, y = NULL) {
   # Verificăm dacă argumentul y este furnizat
   if (missing(y)) {
     if (x >= 0 && x <= 1) {

@@ -27,6 +27,7 @@ density_or_mass <- function(user_function) {
   }
 }
 
+#' @export
 print_density_or_mass <- function(user_function) {
   result <- density_or_mass(user_function)
   if (result == 1) {

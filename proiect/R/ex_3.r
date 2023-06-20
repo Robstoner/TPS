@@ -1,5 +1,6 @@
 source("functie_exemplu.r")
 
+#' @export
 graphic_representation <- function(user_function) {
   # Definiți intervalul de valori pentru x
   x <- seq(-5, 5, length.out = 100)

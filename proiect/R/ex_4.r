@@ -135,6 +135,7 @@ ex_4_density <- function(user_function) {
   }
 }
 
+#' @export
 ex_4 <- function(user_function) {
   fct <- density_or_mass(user_function)
 
