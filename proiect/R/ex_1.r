@@ -1,4 +1,3 @@
-setwd("./proiect/R")
 source("functie_exemplu.r")
 
 density_or_mass <- function(user_function) {
@@ -20,13 +19,24 @@ density_or_mass <- function(user_function) {
 
   # Afișați rezultatul
   if (has_nonnegative_values && is_mass_function) {
-    print("Funcția este o funcție de masă de probabilitate")
+    return(1)
   } else if (has_nonnegative_values && is_density_function) {
-    print("Funcția este o funcție de densitate de probabilitate")
+    return(2)
   } else {
-    print("Funcția nu este o funcție de masă de probabilitate și nici o funcție de densitate de probabilitate")
+    return(0)
   }
 }
 
-density_or_mass(mass_function)
-density_or_mass(density_function)
+print_density_or_mass <- function(user_function) {
+  result <- density_or_mass(user_function)
+  if (result == 1) {
+    print("Funcția introdusă de utilizator este o funcție de masă de probabilitate.")
+  } else if (result == 2) {
+    print("Funcția introdusă de utilizator este o funcție de densitate de probabilitate.")
+  } else {
+    print("Funcția introdusă de utilizator nu este o funcție de masă de probabilitate și nici o funcție de densitate de probabilitate.")
+  }
+}
+
+print_density_or_mass(mass_function)
+print_density_or_mass(density_function)

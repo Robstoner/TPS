@@ -1,4 +1,3 @@
-setwd("./proiect/R")
 source("functie_exemplu.r")
 
 # Funcție pentru calcularea funcției de masă marginală a variabilei X

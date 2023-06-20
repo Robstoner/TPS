@@ -1,9 +1,8 @@
-setwd("./proiect/R")
 source("functie_exemplu.r")
 
 graphic_representation <- function(user_function) {
   # Definiți intervalul de valori pentru x
-  x <- seq(-20, 10, length.out = 100)
+  x <- seq(-5, 5, length.out = 100)
 
   # Calculați valorile densității de probabilitate/funcției de masă pentru x
   density <- user_function(x)
@@ -29,4 +28,4 @@ graphic_representation <- function(user_function) {
   dev.off()
 }
 
-graphic_representation(density_function)
+graphic_representation(mass_function)

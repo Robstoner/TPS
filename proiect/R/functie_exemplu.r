@@ -1,3 +1,5 @@
+setwd("./proiect/R")
+
 # Funcție de densitate de probabilitate pentru o variabilă aleatoare continuă
 density_function <- function(x) {
   dnorm(x, mean = 0, sd = 1)
